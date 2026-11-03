@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061322">
+  <title>Now Showing | MegaWorld Cinemas</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="movie-page" id="movie-page">
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+    <video class="backdrop-video" id="movie-video" autoplay loop playsinline preload="auto" aria-label="Movie trailer">
+      <source id="movie-source" src="" type="video/mp4">
+    </video>
+    <div class="backdrop-shade" aria-hidden="true"></div>
+
+    <div class="loading-state" id="loading-state" role="status">
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <span>Preparing the picture</span>
+    </div>
+
+    <header class="top-bar">
+      <a class="brand" href="movie.html" aria-label="MegaWorld Cinemas home">
+        <img src="assets/logo-name.png" alt="MegaWorld Cinemas">
+      </a>
+      <label class="movie-picker">
+        <span class="visually-hidden">Choose a movie</span>
+        <select id="movie-select" aria-label="Choose a movie">
+          <option value="angry-birds">The Angry Birds Movie 3</option>
+          <option value="bluey">The Bluey Movie</option>
+        </select>
+        <span class="select-chevron" aria-hidden="true"></span>
+      </label>
+    </header>
+
+    <section class="movie-details" aria-live="polite">
+      <div class="movie-logo-wrap">
+        <img class="movie-logo" id="movie-logo" src="" alt="">
+      </div>
+      <div class="movie-copy">
+        <p class="movie-eyebrow" id="movie-subheading"></p>
+        <h1 class="movie-title" id="movie-title"></h1>
+        <p class="release-date" id="release-date"></p>
+      </div>
+    </section>
+
+    <aside class="countdowns" aria-label="Premiere countdowns">
+      <section class="countdown-card">
+        <h2 class="countdown-heading">THIS THEATERS</h2>
+        <div class="countdown-units" id="theater-countdown" aria-label="Theater countdown"></div>
+      </section>
+      <section class="countdown-card cinema-card">
+        <div class="countdown-heading cinema-heading">
+          <img src="assets/movies/MegaWorldCinemas.png" alt="" class="cinema-logo">
+          <h2>THIS SCREENING</h2>
+        </div>
+        <div class="countdown-units" id="cinema-countdown" aria-label="Cinema countdown"></div>
+      </section>
+    </aside>
+
+    <p class="play-hint" id="play-hint" aria-live="polite"></p>
+  </main>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
